@@ -1,0 +1,39 @@
+<%- include ("template/cabecera", {tituloweb: 'Agregar Tarea'}) %>
+
+<body>
+
+    <div id="Header">
+        <h1>Lista de Tarea</h1>
+    </div>
+
+
+    <nav>
+        <ul>
+            <li><a href="/" id="navprin">Lista de tareas</a></li>
+            <li><a href="/agr">Agregar tarea</a></li>
+       </ul>
+    </nav>
+
+
+    
+    <form action="/add" method="POST">
+        <div>
+            <input type="text" name="asig" placeholder="Asignatura" class="form-input">
+        </div>
+        <div>
+            <input type="text" name="tit" placeholder="Titulo" class="form-input">
+        </div>
+        <div>
+            <input type="text" name="fa" placeholder="Fecha de Asignacion" class="form-input">
+        </div>
+        <div>
+            <input type="text" name="fe" placeholder="Fecha de Entrega" class="form-input">
+        </div>
+        <div>
+            <input type="text" name="est" value="No entregada" class="form-input">
+        </div>
+        <button type="submit" >Guardar Tarea</button>
+    </form>
+
+</body>
+</html>
