@@ -4,6 +4,7 @@
 
     <%- include ("template/nav") %>
     
+   <div id="tabla">
     <table class="tabla">
         <thead>
             <tr>
@@ -27,16 +28,17 @@
                     <th><%= data[i].fe %></th>
                     <th><%= data[i].est %></th>
                     <th>
-                        <a href="/delete/<%= data[i].id%>">Eliminar</a>
+                        <a href="/delete/<%= data[i].id%>" class="delete">Eliminar</a>
                     </th>
                     <th>
-                        <a href="/update/<%= data[i].id%>">Editar</a>
+                        <a href="/update/<%= data[i].id%>" class="edit">Editar</a>
                     </th>
                 </tr>
             <% } %>
           <% } %>
         </tbody>
     </table>
+   </div>
 
 </body>
 </html>
