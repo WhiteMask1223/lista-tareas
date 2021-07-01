@@ -8,7 +8,7 @@ controller.list = (req, res) =>{
             if (err) {
                 res.json(err);
             }
-            res.render('tareas', {
+            res.render('index', {
                 data: tareas
             });
         });
