@@ -9,7 +9,7 @@ controller.list = (req, res) =>{
                 res.json(err);
             }
             res.render('index', {
-                data: tareas
+                data: tareas,
             });
         });
     });
@@ -64,6 +64,18 @@ controller.delete = (req, res) => {
             res.redirect('/')
         });
     })
+};
+
+controller.ent = (req, res) => {
+    const { id } = req.params
+    req.getConnection((err, conn) => {
+        conn.query('UPDATE tareas SET est="Entregado" WHERE id = ?', [id], (err, rows) => {
+            if (err) {
+                res.json(err);
+            }
+            res.redirect('/')
+        });
+    });
 };
 
 controller.render = (req, res) => {

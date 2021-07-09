@@ -1,32 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+.fondo::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+
+
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     background-color: rgb(27, 27, 27);
     color: white;
     margin: 0;
+    padding: 0;
   }
 
-  #header {
+  #Header {
     background-color: rgb(10, 10, 10);
     padding: 10px;
   }
-    #header {
+    #Header {
       font-size: 20px;
     }
-  
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #3a3a3a;
-  }
-    
-    nav ul li {
-      float:left;
+
+    #Header a { 
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
+
+nav {
+  width: 100%;
+}
     
-    nav ul li a {
+nav ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-color: #3a3a3a;
+}
+    
+    #agregartarea {
+      float: right;
+    }
+
+    #agregartarea:hover {
+      background-color: rgb(30, 30, 30);
+      transition: 0.5s;
+    }
+
+    #agregartarea a {
       display: block;
       color: white;
       text-align: center;
@@ -34,42 +67,28 @@ body {
       text-decoration: none;
       font-weight: bold;
     }
-  
-    nav ul li a:hover {
-      background-color: rgb(30, 30, 30);
-      transition: 0.5s;
-    }
 
     .titulo {
         margin-left: 10px;
-      }
-
-
-
+    }
 
 
 
 
       #tabla {
-        margin: 10px;
+        margin: auto;
         text-align: center;
-        
       }
+
       table, tr, td {
         border-collapse: collapse;
         border-bottom: 1px solid #797979;
          margin: 5px;
       }
 
-
-          tr:hover{
-              background-color: #353535;
-          }
-      
-      
+     
           table {
-            width: 92%;
-            margin: 20px;
+            width: 100%;
             text-align: center;
           }   
       
@@ -85,26 +104,31 @@ body {
           
           thead {
               background-color: #353535;
-              width: 100%;
           }
 
           table a {
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 16px;
             text-decoration: none;
             font-weight: bold;
           }
 
-          table a:hover {
-            background-color: rgb(30, 30, 30);
-            transition: 0.5s;
-          }
 
+          .tablaid {
+            background-color: #242424;
+          }
           
           .delete {
               background-color: rgb(145, 0, 0);
+              padding: 10px;
+              margin-bottom: 5px;
+              border-bottom-right-radius: 10px;
+              border-bottom-left-radius: 10px;
+          }
+
+          .delete p {
+            margin: 0;
           }
 
           .delete:hover {
@@ -113,11 +137,41 @@ body {
 
           .edit {
               background-color: rgb(0, 0, 124);
+              padding: 10px;
           }
 
           .edit:hover {
-            background-color: blue;
+            background-color: rgb(0, 119, 255);
+          }
+          .entregar {
+            background-color: rgb(0, 128, 11);
+            padding: 10px;
+            margin-top: 5px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px
+          }
+
+          .entregar:hover {
+            background-color: rgb(0, 255, 0);
+          }
+
+          .Pendiente {
+            background-color: rgb(25, 0, 0);
+          }
+
+          .Pendiente:hover{
+            background-color: rgb(50, 0, 0);
+            transition: 0.25s;
         }
+
+          .Entregado {
+            background-color: rgb(0, 75, 0);
+          }
+
+          .Entregado:hover {
+            background-color: rgb(0, 99, 0);
+            transition: 0.25s;
+          }
 
 
 
@@ -131,7 +185,7 @@ body {
         transform: translate(-50%,-50%);
         text-align: center;
         background: #131313;
-        border-radius: 20px;
+        border-radius: 5px;
     }
     
  
@@ -139,48 +193,86 @@ body {
         .box h1 {
             color: white;
             font-weight: 500;
-            border-bottom: 3px solid white;
+            border-bottom: 1px solid white;
         }
     
     
     
-        .box input[type="text"],.box input[type="password"] {
-            border: 0;                      /*borde de los cuadritos*/
+        .box input[type="text"] {
+            border: 0;                    
             background: none;    
             display: block;
             margin: 20px auto;
             text-align: center;
-            border: 1px solid #1100ff;
+            border: 1px solid #0004ff;
             padding: 14px 10px;
             width: 200px;
             color: white;
-            outline: none;                   /*para que el borde de los cuadritos no se resalte*/
-            border-radius: 20px;             /*para redondear extremos*/
+            outline: none;                   
+            border-radius: 5px;             
             transition: 0.25s;
         } 
     
-        .box input[type="text"]:focus,.box input[type="password"]:focus {
-            width: 280px;
-            height: 30px;
+        .box input[type="text"]:focus {
             border-color: #00ffff;
+            border-radius: 20px; 
         } 
     
         .box button[type="submit"] {
             background: #0a0a0a;
-            border: 0;                      /*borde de los cuadritos*/   
+            border: 0;                       
             display: block;
             margin: 20px auto;
             text-align: center;
             padding: 14px 25px;
             color: white;
-            outline: none;                   /*para que el borde de los cuadritos no se resalte*/
-            border-radius: 20px;             /*para redondear extremos*/
+            outline: none;                   
+            border-radius: 5px;            
             transition: 0.25s;
             cursor: pointer;
         }
     
         .box button[type="submit"]:hover {
-            background: #008080;
+            background: #00ffff;
+            color: black;
             border: 1px solid white;
+            font-weight: bold;
         }
         
+
+
+
+
+        [class*="col-"] {
+          width: 100%;
+        }
+        
+        @media only screen and (min-width: 600px) {
+          .col-s-1 {width: 8.33%;}
+          .col-s-2 {width: 16.66%;}
+          .col-s-3 {width: 25%;}
+          .col-s-4 {width: 33.33%;}
+          .col-s-5 {width: 41.66%;}
+          .col-s-6 {width: 50%;}
+          .col-s-7 {width: 58.33%;}
+          .col-s-8 {width: 66.66%;}
+          .col-s-9 {width: 75%;}
+          .col-s-10 {width: 83.33%;}
+          .col-s-11 {width: 91.66%;}
+          .col-s-12 {width: 100%;}
+        }
+        
+        @media only screen and (min-width: 768px) {
+          .col-1 {width: 8.33%;}
+          .col-2 {width: 16.66%;}
+          .col-3 {width: 25%;}
+          .col-4 {width: 33.33%;}
+          .col-5 {width: 41.66%;}
+          .col-6 {width: 50%;}
+          .col-7 {width: 58.33%;}
+          .col-8 {width: 66.66%;}
+          .col-9 {width: 75%;}
+          .col-10 {width: 83.33%;}
+          .col-11 {width: 91.66%;}
+          .col-12 {width: 100%;}
+        }
