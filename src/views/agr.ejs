@@ -7,19 +7,22 @@
     <form action="/add" method="POST" class="box">
         <h1>Agregar Tarea</h1>
         <div>
-            <input type="text" name="asig" placeholder="Asignatura" class="form-input">
+            <label for="correoid"><div>Datos:</div></label> <br>
+            <input type="text" name="asig" placeholder="Asignatura" class="form-input" id="datostop">
         </div>
         <div>
             <input type="text" name="tit" placeholder="Titulo" class="form-input">
         </div>
         <div>
-            <input type="text" name="fa" placeholder="Fecha de Asignacion" class="form-input">
+            <label for="correoid"><div>Fechas: <p>(Año-Mes-Dia)</p></div></label> <br>
+            <input type="text" name="fa" placeholder="Fecha de Asignacion" class="form-input" id="fechatop">
         </div>
         <div>
             <input type="text" name="fe" placeholder="Fecha de Entrega" class="form-input">
         </div>
         <div>
-            <input type="text" name="est" value="Pendiente" class="form-input">
+            <label for="correoid"><div>Estado: <p>(Pendiente/Entregado)</p></div></label> <br>
+            <input type="text" name="est" value="Pendiente" class="form-input" id="estadotop">
         </div>
         <button type="submit" >Guardar Tarea</button>
     </form>

@@ -8,19 +8,22 @@
         <form action="/update/<%= data.id %>" method="POST" class="box">
             <h1>Editar Tarea</h1>
             <div>
-                <input type="text" name="asig" value="<%= data.asig %>" class="form-input">
+                <label for="correoid"><div>Datos:</div></label> <br>
+                <input type="text" name="asig" value="<%= data.asig %>" class="form-input" id="datostope">
             </div>
             <div>
                 <input type="text" name="tit" value="<%= data.tit %>"class="form-input">
             </div>
             <div>
-                <input type="text" name="fa" value="<%= data.fa %>" class="form-input">
+                <label for="correoid"><div>Fechas: <p>(Año-Mes-Dia)</p></div></label> <br>
+                <input type="text" name="fa" value="<%= data.fa %>" class="form-input" id="fechatope">
             </div>
             <div>
                 <input type="text" name="fe" value="<%= data.fe %>" class="form-input">
             </div>
             <div>
-                <input type="text" name="est" value="<%= data.est %>" class="form-input">
+                <label for="correoid"><div>Estado: <p>(Pendiente/Entregado)</p></div></label> <br>
+                <input type="text" name="est" value="<%= data.est %>" class="form-input" id="estadotope">
             </div>
             <button type="submit" >Guardar Cambios</button>
         </form>

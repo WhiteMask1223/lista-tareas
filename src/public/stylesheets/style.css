@@ -238,7 +238,42 @@ nav ul {
             border: 1px solid white;
             font-weight: bold;
         }
-        
+
+        label {
+          text-align: left;
+          margin: 0;
+          padding: 0;
+        }
+
+        label p {
+          color: rgb(124, 124, 124);
+          margin: 0;
+          padding: 0;
+        }
+
+        #datostop {
+          margin-top: 0;
+        }
+
+        #fechatop {
+          margin-top: 0;
+        }
+
+        #estadotop {
+          margin-top: 0;
+        }
+
+        #datostope {
+          margin-top: 0;
+        }
+
+        #fechatope {
+          margin-top: 0;
+        }
+
+        #estadotope {
+          margin-top: 0;
+        }
 
 
 
